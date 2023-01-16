@@ -14,11 +14,11 @@ isJohnOlder = (ageJohn > ageMark);
 isJohnEqual = (ageJohn == ageMark);
 
 // Ausgabe
-console.log("ageJohn: " + ageJohn);
-console.log("ageMark: " + ageMark);
-console.log("isJohnOlder: " + isJohnOlder);
-console.log("isJohnEqual: " + isJohnEqual);
-console.log("------------------");
+// console.log("ageJohn: " + ageJohn);
+// console.log("ageMark: " + ageMark);
+// console.log("isJohnOlder: " + isJohnOlder);
+// console.log("isJohnEqual: " + isJohnEqual);
+// console.log("------------------");
 
 /************ IF  ************/
 // TINA --> There is no alternative!
@@ -54,20 +54,57 @@ console.log("------------------");
 /************ IF - ELSE IF  ************/
 // mit alternativen Fällen (älter, jünger, gleich alt)
 
-if (isJohnOlder)
-{
-    console.log("John ist älter."); 
-} 
+// if (isJohnOlder)
+// {
+//     console.log("John ist älter."); 
+// } 
 
-// < --- 1..n Alternativen
-else if (isJohnEqual)
+// // < --- 1..n Alternativen
+// else if (isJohnEqual)
+// {
+//     console.log("John ist gleich alt."); 
+// }
+// // < ---
+
+// else 
+// {
+//     console.log("John ist jünger.");  
+// }
+
+/****** Fallunterscheidung / SWITCH|CASE 1 ******/
+
+const firstName = "Jane";
+let job;
+
+job = "driver";     // .. fährt TAXI! / UBER
+// job = "diver";      // .. taucht im Rhein! 
+// job = "artist";     // .. malt ein Bild!
+// job = "pilot";      // .. macht etwas anderes! --> default
+// job = "teacher";    // .. unterrichtet!
+// job = "instructor";  // .. unterrichtet!
+
+switch (job) 
 {
-    console.log("John ist gleich alt."); 
+    case "driver":
+        console.log("Jane fährt TAXI!");
+        break;
+    case "diver":
+        console.log("Jane taucht im Rhein!");
+        break;
+    case "artist":
+        console.log("Jane malt ein Bild!");
+        break;
+    case "teacher":
+    case "instructor":
+        console.log("Jane unterrichtet!");
+        break;
+
+    // case "instructor" || "teacher": // ??
+    //     console.log("Jane unterrichtet!");
+    //     break;
+
+
+    default:
+        console.log("Jane macht etwas anderes!");
+        break;
 }
-// < ---
-
-else 
-{
-    console.log("John ist jünger.");  
-}
-
